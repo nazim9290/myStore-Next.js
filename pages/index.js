@@ -1,3 +1,4 @@
+import Link from "next/link";
 import Navbar from "../components/Navbar";
 
 const Home = ({ products }) => {
@@ -14,6 +15,11 @@ const Home = ({ products }) => {
         <div className="card-content">
           <p>{product.description}</p>
           <h4>{product.price}</h4>
+          <Link href="/product/[id]" as={`/product/${product._id}`}>
+            <button className="btn">
+              <a>view product details</a>
+            </button>
+          </Link>
         </div>
       </div>
     );
