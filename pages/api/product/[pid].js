@@ -7,6 +7,7 @@ export default async (req, res) => {
       break;
     case "DELETE":
       await deleteProduct(req, res);
+      break;
     default:
       break;
   }
