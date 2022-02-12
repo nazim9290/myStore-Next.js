@@ -1,6 +1,6 @@
 import mongoose, { models } from "mongoose";
 
-const productSchema = new mongoose.Schema({
+const productsSchema = new mongoose.Schema({
   name: {
     type: String,
     required: true,
@@ -22,4 +22,4 @@ const productSchema = new mongoose.Schema({
 //dont over right error problem so  change export type system
 // export default mongoose.model("product", productSchema);
 export default mongoose.models.product ||
-  mongoose.model("product", productSchema);
+  mongoose.model("product", productsSchema);
