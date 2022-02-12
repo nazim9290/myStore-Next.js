@@ -3,6 +3,43 @@
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 10px;
 }
+
+.modal-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+}
+.modal {
+  padding: 30px;
+  max-width: 480px;
+  margin: 200px auto;
+  background: #fff;
+  border-radius: 10px;
+}
+.modal h2 {
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 10px;
+}
+.modal .sales-btn {
+  border: 4px solid #333;
+  font-size: 18px;
+  text-transform: uppercase;
+}
+
+.new-event-form label,
+.new-event-form input {
+  display: block;
+  text-align: left;
+  width: 100%;
+  margin: 10px auto;
+  padding: 10px;
+  box-sizing: border-box;
+  font-size: 1.2em;
+}
+
 @media screen and (max-width: 400px) {
   .rootcard {
     grid-template-columns: repeat(1, 1fr);

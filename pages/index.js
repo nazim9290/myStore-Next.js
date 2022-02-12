@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Navbar from "../components/Navbar";
+import baseUrl from "../helpers/baseUrl";
 
 const Home = ({ products }) => {
   const productList = products.map((product) => {
@@ -17,7 +18,7 @@ const Home = ({ products }) => {
           <h4>{product.price}</h4>
           <Link href="/product/[id]" as={`/product/${product._id}`}>
             <button className="btn">
-              <a>view product details</a>
+              <a className="white-text">view product details</a>
             </button>
           </Link>
         </div>
@@ -29,7 +30,7 @@ const Home = ({ products }) => {
 };
 
 export async function getStaticProps() {
-  const res = await fetch("http://localhost:3000/api/product");
+  const res = await fetch(`${baseUrl}/api/product`);
   const data = await res.json();
   return {
     props: {
